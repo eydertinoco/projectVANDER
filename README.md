@@ -1,4 +1,4 @@
-# projectVANDER
+# Game Design Document
 ## Theme / Setting / Genre 
 
 <Insert Theme here> 
