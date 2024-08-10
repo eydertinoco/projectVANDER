@@ -1,7 +1,7 @@
 # Game Design Document
 ## Theme / Setting / Genre 
 
-<Insert Theme here> 
+An alien simple offline game for smarthphone users with local record.
 
 ## Core Gameplay Mechanics Brief 
 
@@ -37,13 +37,11 @@
 
 <Time Scale> /How long will it take to make this game?/ 
 
-<Team Size> 
+Team Size : 2
 
 <Core Team> 
 
-<Team Member Name> 
-
-/What does he/she do?/ 
+Team Member Name : Eyder Tinoco (Dev), Lucas Vanderley (Dev)
 
 <Cost to employ them full time or part time> 
 
