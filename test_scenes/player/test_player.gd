@@ -16,7 +16,7 @@ func move() -> void:
 	
 	# Calculo da velocidade
 	var player_velocity = input_vector * speed * 100
-	velocity = lerp(velocity, player_velocity, 0.05)
+	velocity = lerp(velocity, player_velocity, 0.20)
 	move_and_slide()
 	
 	# Atualiza a variável is_running
