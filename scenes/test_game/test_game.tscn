@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://54ktqcifwov1"]
+
+[ext_resource type="PackedScene" uid="uid://bhkrm5s048ict" path="res://scenes/player/player.tscn" id="1_tla8b"]
+[ext_resource type="PackedScene" uid="uid://b2mkwh0ouwttc" path="res://scenes/enemy/zombie_female_01.tscn" id="2_spqb4"]
+[ext_resource type="PackedScene" uid="uid://cpo762mg6c45a" path="res://scenes/enemy/zombie_male_01.tscn" id="3_lg2cj"]
+
+[node name="TestGame" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_tla8b")]
+position = Vector2(-1, -2)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+position = Vector2(1, 2)
+remote_path = NodePath("../../Camera2D")
+update_rotation = false
+update_scale = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ZombieFemale01" parent="." instance=ExtResource("2_spqb4")]
+position = Vector2(1125, 43)
+
+[node name="ZombieFemale02" parent="." instance=ExtResource("3_lg2cj")]
+position = Vector2(28, 632)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgi0ipvgeikd8"
-path="res://.godot/imported/Warrior_Yellow.png-ed1945badcb7308fbad56fa514957dca.ctex"
+uid="uid://cgmy628ixcgcb"
+path="res://.godot/imported/Enemy_Female_1-Sheet-1.png-e2520e9eb5a873b5afd2cd583cd8be35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://test_sprites/Warrior_Yellow.png"
-dest_files=["res://.godot/imported/Warrior_Yellow.png-ed1945badcb7308fbad56fa514957dca.ctex"]
+source_file="res://sprites/enemies/Enemy_Female_1-Sheet-1.png"
+dest_files=["res://.godot/imported/Enemy_Female_1-Sheet-1.png-e2520e9eb5a873b5afd2cd583cd8be35.ctex"]
 
 [params]
 

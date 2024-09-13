@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpo762mg6c45a"]
+
+[ext_resource type="Script" path="res://scripts/enemies/behaviours/follow_player.gd" id="1_bnwyf"]
+[ext_resource type="Texture2D" uid="uid://rr8ouvavyasw" path="res://sprites/enemies/Enemy_Man_1-Sheet-1.png" id="1_x2nt6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbmjc"]
+atlas = ExtResource("1_x2nt6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7w78f"]
+atlas = ExtResource("1_x2nt6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oixl"]
+atlas = ExtResource("1_x2nt6")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpxay"]
+atlas = ExtResource("1_x2nt6")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xwscl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbmjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7w78f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oixl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpxay")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xefsa"]
+radius = 7.0
+
+[node name="ZombieFemale01" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_bnwyf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -14)
+sprite_frames = SubResource("SpriteFrames_xwscl")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14)
+shape = SubResource("CapsuleShape2D_xefsa")
