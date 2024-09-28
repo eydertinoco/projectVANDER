@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhkrm5s048ict"]
+[gd_scene load_steps=9 format=3 uid="uid://bhkrm5s048ict"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_stoyc"]
+[ext_resource type="PackedScene" uid="uid://qm8aiihpejf1" path="res://scenes/player/bullet.tscn" id="2_iflv4"]
 [ext_resource type="Texture2D" uid="uid://cbxqq0rutvvqr" path="res://sprites/player/Warrior-Sheet.png" id="2_v04hj"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dibhf"]
-radius = 7.0
-height = 28.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_bogmt"]
+radius = 5.0
 
 [sub_resource type="Animation" id="Animation_stcoc"]
 length = 0.001
@@ -66,8 +66,10 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(176, 132)
 motion_mode = 1
 script = ExtResource("1_stoyc")
+attacks = Array[PackedScene]([ExtResource("2_iflv4")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -14)
@@ -75,8 +77,8 @@ texture = ExtResource("2_v04hj")
 hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -12)
-shape = SubResource("CapsuleShape2D_dibhf")
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_bogmt")
 debug_color = Color(0, 0.6, 0.701961, 0.34902)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

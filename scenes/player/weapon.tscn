@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://r4gd00r2odyw"]
+
+[ext_resource type="Texture2D" uid="uid://cjj8nu2dspkig" path="res://sprites/attacks/bullet.png" id="1_hr8xl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4iaw"]
+radius = 100.0
+
+[node name="Weapon" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r4iaw")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="Bullet" type="Sprite2D" parent="Marker2D"]
+position = Vector2(12.5, -3)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hr8xl")
